@@ -1,0 +1,108 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* PAGE BACKGROUND */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+}
+
+/* CARD */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(18px);
+  padding: 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 25px 80px rgba(0,0,0,0.45);
+
+  /* animation */
+  animation: cardEnter 0.9s ease forwards;
+}
+
+/* CARD ANIMATION */
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* TEXT */
+.auth-card h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+/* INPUTS */
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+/* BUTTON */
+.auth-card button {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(59,130,246,0.5);
+}
+
+/* LINKS */
+.auth-card p {
+  color: #e5e7eb;
+  text-align: center;
+  margin-top: 1.3rem;
+  font-size: 0.9rem;
+}
+
+.auth-card a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.6rem;
+  }
+}
+/* MOVING CAR */
